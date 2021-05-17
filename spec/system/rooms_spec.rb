@@ -11,7 +11,70 @@ RSpec.describe 'チャットルームの削除機能', type: :system do
 
     # 作成されたチャットルームへ遷移する
     click_on(@room_user.room.name)
+    prefecture = ['北海道', '青森', '...(省略)...', '沖縄']
 
+    def select_prefecture(prefecture, category)
+      num = gets.to_i
+      if category == 'birthplace'
+        birthplace = prefecture[num]
+        puts birthplace
+      elsif category == 'address'
+        address = prefecture[num]
+        puts address
+      elsif category == 'work_address'
+        work_address = prefecture[num]
+        puts work_address
+      end
+    end
+    
+    puts 
+    
+    
+    select_prefecture(prefecture, 'birthplace')
+    select_prefecture(prefecture, 'address')
+    select_prefecture(prefecture, 'work_address')prefecture = ['北海道', '青森', '...(省略)...', '沖縄']
+
+    def select_prefecture(prefecture, category)
+      num = gets.to_i
+      if category == 'birthplace'
+        birthplace = prefecture[num]
+        puts birthplace
+      elsif category == 'address'
+        address = prefecture[num]
+        puts address
+      elsif category == 'work_address'
+        work_address = prefecture[num]
+        puts work_address
+      end
+    end
+    
+    puts 
+    
+    
+    select_prefecture(prefecture, 'birthplace')
+    select_prefecture(prefecture, 'address')
+    select_prefecture(prefecture, 'work_address')prefecture = ['北海道', '青森', '...(省略)...', '沖縄']
+
+    def select_prefecture(prefecture, category)
+      num = gets.to_i
+      if category == 'birthplace'
+        birthplace = prefecture[num]
+        puts birthplace
+      elsif category == 'address'
+        address = prefecture[num]
+        puts address
+      elsif category == 'work_address'
+        work_address = prefecture[num]
+        puts work_address
+      end
+    end
+    
+    puts 
+    
+    
+    select_prefecture(prefecture, 'birthplace')
+    select_prefecture(prefecture, 'address')
+    select_prefecture(prefecture, 'work_address')
     # メッセージ情報を5つDBに追加する
     FactoryBot.create_list(:message, 5, room_id: @room_user.room.id, user_id: @room_user.user.id)
 
